@@ -110,7 +110,7 @@ void modify(char **mat, int *nrcol, int l, int ind, char dim, unsigned int val)
 			mat[l][ind * 4 - 4 + j] = val % 256;
 				val /= 256;
 		}
-	}
+	} 
 }
 
 void del(char **mat, int l, int ind, char dim) // inlocuire elemente cu 0
