@@ -1,0 +1,52 @@
+Paval Bogdan-Costin 312CA
+
+Task 1
+
+	Acest task este rezolvat cu ajutorul mai multor functii:
+		- alloc_vect:
+			- se aloca memorie pentru un vector, unde se vor memora numerele
+			  coloanelor matricei citite;
+			- returneaza vectorul alocat;
+		- alloc_read:
+			- se aloca memorie pentru n linii, apoi pentru fiecare linie;
+			- se citeste fiecare element in hexazecimal si se imparte in patru
+			  bucati ce urmeaza a fi puse in matricea alocata anterior;
+			- returneaza matricea alocata;
+		- average:
+			- calculeaza media aritmetica a bytes-lor care formeaza
+			  conturul hartii;
+			- returneaza valoarea mediei.
+
+Task 2
+
+		Se citeste numarul de modificari. Se apeleaza functia task2, unde
+	se citesc instructiunile de modificare si se apeleaza una dintre functiile
+	de mai jos, in functie de tipul operatiei:
+		- modify:
+			- se citeste valoarea in hexazecimal cu care se va inlocui
+			  elementul cerut;
+			- in functie de dimensiunea data, se verifica daca trebuie
+			  realocata memoria si, daca este nevoie, face acest lucru;
+			- inlocuieste elementul cerut cu valoarea data;
+		- del:
+			- in functie de dimensiunea data, se inlocuiesc unul, doua sau
+			  patru elemente cu 0;
+		- swap: - pentru dimensiunea S interschimba valorile a doua elemente;
+			- pentru dimensiunea I interschimba valorile a patru elemente;
+			- pentru dimensiunea C nu interschimba niciun element.
+	Functia print_mat afiseaza matricea cu elementele in format hexazecimal.
+
+Task 3
+
+		Se apeleaza functia task3, unde pentru fiecare element din matrice
+	se apeleaza functia sum:
+	- se calculeaza suma elementelor egale cu 0 care pot exista in stanga,
+	 dreapta, sus sau jos, astfel incat sa formeze o gaura neagra supermasiva;
+	- daca se gaseste un element egal cu 0, se inlocuieste cu 1 pentru a nu fi
+	  considerat si la urmatoare numarare;
+	- functia este recursiva, se reapeleaza cand a fost gasita o valoare 0 si
+	dupa ce a fost verificata conditia de existenta a elementului urmator;
+	- returneaza suma calculata.
+		Apoi in functia task3 se verifica daca suma returnata de functia sum
+	este maxima, iar in acest caz se memoreaza pozitiile i, j si valoarea
+	sumei (fiind maxima).

@@ -1,0 +1,67 @@
+Paval Bogdan-Costin 312CA
+
+LOAD
+	- citeste din fisier tipul imaginii, latimea, inaltimea si dimensiunea
+     maxima si initializeaza variabila pow cu 1, daca imaginea este grayscale, 
+     sau cu 3 daca este color
+	- aloca memorie matricei, unde citeste pixelii imaginii
+
+SELECT ALL
+	- selecteaza toata imaginea, memorand coordonatele in campurile variabile 
+    sel, de tipul coord
+
+SELECTT
+	- testeaza toate cazurile valide ale coordonatelor si le memoreaza in 
+    campurile variabile sel, de tipul coord
+	- afiseaza pe ecran mesajul dorit
+
+ROTATE
+	- daca unghiul nu este corespunzator sau selectia nu este buna, afiseaza 
+    pe ecran un mesaj corespunzator
+	- calculeaza de cate ori trebuie rotita imaginea la dreapta, in functie 
+    de valoarea unghiului
+	- aloca memorie pentru matricea cpy2 si copiaza pixelii din selectie
+	- urmeaza doua cazuri (daca este selectata toata imaginea sau nu), unde 
+    se intampla lucururi asemanatoare: aloca memorie pentru cpy1, unde salveza 
+    imaginea inversata; dupa aceea se copiaza in zona selectata din matricea 
+    initiala si se dezaloca memoria matricei cpy1
+	- daca a fost selectata toata imaginea atunci este dealocata memoria 
+    acesteia si se aloca pentru noile dimensiuni
+	- se dezaloca memoria matricei cpy2
+	- returneaza valoarea 1 daca rotirea s-a efectuat cu succes, 0 daca ceva 
+    nu a mers bine si afiseaza un mesaj corespunzator
+
+CROP
+	- se salveaza noile dimensiuni ale matricei, se aloca memorie pentru 
+    matricea cpy, unde este copiata selectia
+	- se dezaloca matricea veche si se aloca cu noile dimensiuni
+	- se copiaza in matrice ceea ce este in cpy si se dezaloca memoria acesteia
+
+GRAYSCALE
+	- parcurge selectia, calculeaza noile valorile se le inlocuieste in matrice
+	- afiseaza un mesaj corespunzator
+
+SEPIA
+	- parcurge selectia, calculeaza noile valorile se le inlocuieste in matrice
+	- afiseaza un mesaj corespunzator
+
+SAVE
+	- deschide fisierul de iesire si scrie tipul imaginii, latimea, inaltimea 
+    si valoarea maxima
+	- se verifica ce tip are fisierul in care trebuie scris si realizeaza 
+    si scrierea matricea
+	- afiseaza un mesaj corespunzator
+
+EXITT
+	- dezaloca memoria si inchide programul
+
+READ
+	- se citesc comenzi pana cand se ajunge la comanda EXITT, care opreste 
+    citirea comenzilor
+	- citeste fiecare linie data de utilizator si in functie de comanda 
+    primita, parseaza restul argumentelor comenzii si apeleaza functiile 
+    responsabile de executia comenzii respective
+	- afiseaza mesaje tipului comenzii
+
+MAIN
+	- apeleaza functia READ

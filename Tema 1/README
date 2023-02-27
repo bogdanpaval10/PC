@@ -1,0 +1,41 @@
+
+Problema 1 - On the fly analysis
+
+	Programul citeste valorile primelor doua inaltimi, iar apoi in for citeste cate o valoare a inaltimilor.
+	Se iau grupuri de cate trei inaltimi si se verifica daca cel din mijloc este copac special.
+	In acest timp se calculeaza si suma, media aritmetica si cele doua ianltimi.
+
+Problema 2 - Proprietati ale numerelor naturale
+
+	In main se citeste numarul N, dupa care se apeleaza functia periodicity. 
+	In aceasta functie se vor apela in mod repetat functiile frequency, increasing, decreasing si substraction.
+	Aceste functii sunt responsabile sa formeze un vector de frecventa, numerele in ordine crescatoare, descrescatoare si diferenta a doua numere.
+	Valorile diferentelor sunt stocate intr-un vector si se verifica la fiecare pas daca diferenta care se introduce atunci in vector are o valoare egala una deja existenta in vector.
+	In acest caz, programul afiseaza valorile cerute de problema.
+
+Problema 3 - Perfectionarea punctajelor
+
+	In main se citesc valorile introduse, iar cele care reprezinta notele si puncte sunt stocate intr-o matrice cu 2 linii si n coloane.
+	Functia b_form contruieste o alta matrice cu 3 linii si un numar mai mic decat n de coloane:
+													-pe prima linie vor fi notele diferite de 10;
+													-pe a doua linie punctele materiei cu nota diferita de 10;
+													-pe a treia linie o valoare egala cu cat ar creste punctajul.
+	Functia b_sort sorteaza matricea descrescator in functie de a treia linie a matricei formate anterior in functia b_form.
+	In main este calculat numarul minim de materii la care se pot mari notele, astfel incat punctajul sa fie mai mare decat cel cerut.
+
+Problema 4 - Nonogram checker
+
+	In main se citeste numarul de puzzle-uri ce vor fi verificare. Pentru fiecare puzzle se va apela functia check.
+	Am construit functia check, unde se vor citi numarul de linii, numarul de coloane.
+	In vectorul v se citesc restrctiile de pe fiecare linie, in vectorul w restrictiile de pe fiecare coloana, iar in a elementele matricei.
+	Parcurgand matricea pe linii, am verificat:
+						-daca numarul de grupuri de pe fiecare linie corespunde cu numarul de grupuri memorat in vetorul v;
+						-daca numarul de elemente din fiecare grup corespunde cu numarul de elemente al grupului respectiv memorat in vetorul v.
+	Daca una dintre aceste verificari nu a fost adevarata, atunci functia returneaza valoarea -1.
+	Parcurgand matricea pe coloane, am verificat:
+						-daca numarul de grupuri de pe fiecare coloana corespunde cu numarul de grupuri memorat in vetorul w;
+						-daca numarul de elemente din fiecare grup corespunde cu numarul de elemente al grupului respectiv memorat in vetorul w.
+	In cazul ambelor parcurgeri, daca a fost verificata vreo conditie, atunci din vectorul la pozitia respectiva, se scade 1 unitate din numarul de grupuri sau numarul de elemente 1 din grupul respectiv.
+	Daca una dintre aceste verificari nu a fost adevarata, atunci functia returneaza valoarea 0.
+	In cazul in care toate verificarile de pana acum au fost adevarate, functia returneaza valoarea 1.
+	Programul va afisa mesajul "Corect" sau "Eroare", in functie de valoarea returnata de functie.
